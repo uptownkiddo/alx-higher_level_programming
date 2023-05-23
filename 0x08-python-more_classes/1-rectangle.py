@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 i#!/usr/bin/python3
+=======
+#!/usr/bin/python3
+>>>>>>> 939971c5e3b041eb9ef1e73607a83beb0a2613e9
 """This module defines the class Rectangle"""
 
 
