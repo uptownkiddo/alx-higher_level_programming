@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 '''Rectangle module'''
+
+
 class Rectangle:
     '''Creates rectangle with width and height values'''
     def __init__(self, width=0, height=0):
@@ -30,3 +32,4 @@ class Rectangle:
             raise ValueError('height must be >= 0')
 
         self.__height = value
+        

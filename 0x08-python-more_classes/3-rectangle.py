@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 '''Rectangle module'''
+
+
 class Rectangle:
     '''Creates rectangle'''
     def __init__(self, width=0, height=0):
@@ -36,7 +38,7 @@ class Rectangle:
         area = self.__width * self.__height
         return area
     def perimeter(self):
-        '''Return the oerimeter'''
+        '''Return the perimeter'''
         if self.__height | self.__width == 0:
             perimeter = 0
             return perimeter

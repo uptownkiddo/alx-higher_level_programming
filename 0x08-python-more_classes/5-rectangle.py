@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 '''rectangle module'''
+
+
 class Rectangle:
     '''Creates a rectangle'''
     def __init__(self, width=0, height=0):
@@ -12,10 +14,10 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        if isinstance( value, int ) is False:
-            raise TypeError( 'width must be an integer' )
+        if isinstance(value, int) is False:
+            raise TypeError('width must be an integer')
         if value < 0:
-            raise ValueError( 'width must be >= 0' )
+            raise ValueError('width must be >= 0')
 
         self.__width = value
 
@@ -25,10 +27,10 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        if isinstance( value, int ) is False:
-            raise TypeError( 'height must be an integer' )
+        if isinstance(value, int) is False:
+            raise TypeError('height must be an integer')
         if value < 0:
-            raise ValueError( 'height must be >= 0' )
+            raise ValueError('height must be >= 0')
 
         self.__height = value
 
@@ -51,8 +53,8 @@ class Rectangle:
         if self.__width | self.__height == 0:
             return string
         else:
-            for i in range( self.__height ):
-                for j in range( self.__width ):
+            for i in range(self.__height):
+                for j in range(self.__width):
                     string += '#'
                 if i is not self.__height - 1:
                     string += '\n'
@@ -60,6 +62,6 @@ class Rectangle:
             return string
 
     def __repr__(self):
-        return ('Rectangle ({}, {})'.format( self.__width, self.__height ))
+        return ('Rectangle {}, {}'.format(self.__width, self.__height))
     def __del__(self):
         print('Bye rectangle...')
