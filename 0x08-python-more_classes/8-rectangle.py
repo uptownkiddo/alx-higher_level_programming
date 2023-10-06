@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-
+'''rectangle module'''
 class Rectangle:
     '''Class the defines a rectangle'''
-    #public class attribute
+
+    '''    public class attribute'''
     number_of_instances = 0
 
     print_symbol = "#"

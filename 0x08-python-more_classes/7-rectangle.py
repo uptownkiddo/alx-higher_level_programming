@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+'''rectangle module'''
 class Rectangle:
     '''Class the defines a rectangle'''
     #public class attribute

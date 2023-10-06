@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-
+'''Rectangle module'''
 class Rectangle:
+    '''creates a rectangle'''
+
     '''public class attribute'''
     number_of_instances = 0
     def __init__(self, width=0, height=0):
@@ -36,10 +38,12 @@ class Rectangle:
         self.__height = value
 
     def area(self):
+        '''Calculates and returns the area'''
         area = self.__width * self.__height
         return area
 
     def perimeter(self):
+        '''Calculates and returns perimeter'''
         if self.__height | self.__width == 0:
             perimeter = 0
             return perimeter
