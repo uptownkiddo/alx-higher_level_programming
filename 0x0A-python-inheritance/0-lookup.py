@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-'''Object lookuo function'''
+"""Object lookup function"""
+
 
 def lookup(obj):
-    '''Return an ojects attibutes and methods'''
-    return (dir(obj))
+    """Return an objects attributes and methods"""
+    return dir(obj)
