@@ -1,0 +1,102 @@
+[test-01]: import class
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+[test-02]: create instance of class
+>>> bg = BaseGeometry()
+
+[test-03]: validate integers
+>>> bg.integer_validator("nice", 69)
+
+[test-04]: validate integers
+>>> bg.integer_validator("very nice", 420)
+
+[test-05]: except type error
+>>> try:
+...		bg.integer_validator("oh", "hello")
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[TypeError]: oh must be an integer
+
+[test-06]: except value error from negative number
+>>> try:
+...		bg.integer_validator("negative", -8)
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[ValueError]: negative must be greater than 0
+
+[test-07]: except value error from zero
+>>> try:
+...		bg.integer_validator("zero", 0)
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[ValueError]: zero must be greater than 0
+
+[test-08]: except type error from tuple
+>>> try:
+...		bg.integer_validator("tuple", (1, 2))
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[TypeError]: tuple must be an integer
+
+[test-09]: except type error from dictionary
+>>> try:
+...		bg.integer_validator("dictionary", {1: 2})
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[TypeError]: dictionary must be an integer
+
+[test-10]: except type error from None
+>>> try:
+...		bg.integer_validator("None", None)
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[TypeError]: None must be an integer
+
+[test-11]: except type error from Bool
+>>> try:
+...		bg.integer_validator("Bool", False)
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[TypeError]: Bool must be an integer
+
+[test-12]: except type error from list
+>>> try:
+...		bg.integer_validator("list", [3, 4, 5])
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[TypeError]: list must be an integer
+
+[test-13]: except type error from list
+>>> try:
+...		bg.integer_validator("list", [3, 4, 5])
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[TypeError]: list must be an integer
+
+[test-14]: except type error due to number of positional arguments passed
+>>> try:
+...		bg.integer_validator("argument")
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[TypeError]: integer_validator() missing 1 required positional argument: 'value'
+
+[test-15]: except type error due to number of positional arguments passed
+>>> try:
+...		bg.integer_validator("argument", 4, "yeah")
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[TypeError]: integer_validator() takes 3 positional arguments but 4 were given
+
+[test-16]: area not implemented exception
+>>> try:
+...		bg.area()
+... except Exception as e:
+...		print(e)
+area() is not implemented
+
+[test-17]: except type error from set
+>>> try:
+...		bg.integer_validator("set", {3, 4, 5})
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[TypeError]: set must be an integer
